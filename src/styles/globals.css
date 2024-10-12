@@ -1,0 +1,12 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* カスタムアニメーションの遅延 */
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
