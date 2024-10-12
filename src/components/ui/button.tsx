@@ -1,15 +1,9 @@
-// src/components/ui/button.tsx
-import React from 'react'
-import { cn } from '@/lib/utils'
+import React from 'react';
+import classNames from 'classnames';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'secondary'
-  size?: 'sm' | 'md' | 'lg'
-}
-
-const buttonVariants = {
-  default: 'bg-primary text-white',
-  secondary: 'bg-secondary text-white',
+  variant?: 'default' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,9 +14,9 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={cn(
+      className={classNames(
         'px-4 py-2 rounded-md font-semibold',
-        buttonVariants[variant],
+        variant === 'default' ? 'bg-primary text-white' : 'bg-secondary text-white',
         {
           'text-sm': size === 'sm',
           'text-md': size === 'md',
@@ -32,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       )}
       {...props}
     />
-  )
-}
+  );
+};
 
-export { Button }
+export { Button };

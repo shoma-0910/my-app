@@ -1,10 +1,10 @@
 // src/components/ui/input.tsx
-import React from 'react'
-import { cn } from '@/lib/utils'
+import React from 'react';
+import { cn } from '@/lib/utils';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input: React.FC<InputProps> = ({ className, ...props }) => {
+const Input: React.FC<InputProps> = ({ className = '', ...props }) => {
   return (
     <input
       className={cn(
@@ -13,7 +13,7 @@ const Input: React.FC<InputProps> = ({ className, ...props }) => {
       )}
       {...props}
     />
-  )
-}
+  );
+};
 
-export { Input }
+export { Input };
