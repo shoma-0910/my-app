@@ -10,6 +10,7 @@ import { Car, Wrench, Zap, Phone, Menu, X } from "lucide-react"
 
 export default function StylishHomepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
